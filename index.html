@@ -39,7 +39,7 @@ var id = 'RHYH3UQ8';
 	}
 
 
-function createCard(id) {
+function createCard() {
   var xhttp = new XMLHttpRequest();
   
   xhttp.onreadystatechange = function() {
@@ -58,7 +58,7 @@ function createCard(id) {
   var typeText = type=='ws'? "Activity" : "Book";
   
   var card = 
-		'<div class="card"><a class="card-link" title="'+ filename +'" href="https://www.geogebra.org/m/'+ id +'">'+
+		'<div class="card"><a class="card-link" title="'+ filename +'" href="https://www.geogebra.org/m/'+ id +'" target="_blank">'+
 			'<div class="card-image" id="card-image"><img alt="" src="' + previewUrl +'" ></div>'+
 			'<div class="card-content">'+
 				'<h3 class="card-title" id="card-title">'+ filename +'</h3>'+
@@ -71,7 +71,7 @@ function createCard(id) {
   }
 };
   
-  xhttp.open("GET", "https://api.geogebra.org/v1.0/materials/RHYH3UQ8?scope=basic&embed=creator", true);
+  xhttp.open("GET", "https://api.geogebra.org/v1.0/materials/" + id + "?scope=basic&embed=creator", true);
   xhttp.send();
  
 }
