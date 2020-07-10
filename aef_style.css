@@ -21,7 +21,7 @@ li {
 	float: left;
     box-sizing: border-box;
     min-height: 1px;
-	max-height: 300px;
+	max-width: 250px;
 }
 
 .card:hover {
@@ -32,6 +32,16 @@ li {
     overflow: hidden;
 	position: relative;
 }
+
+.card-image img{
+	max-width: 100%;
+    margin: auto;
+    width: auto;
+    height: auto;
+	display: block;
+    border-radius: 2px 2px 0 0;
+}
+
 .card-content {
 	padding: 12px;
 	min-height: 72px;
@@ -72,7 +82,8 @@ li {
     white-space: nowrap;
     order: -1;
 }
-.author {
+.card-author {
+	font-size: 70%;
 	line-height: 24px;
     height: 24px;
 	margin: 0;

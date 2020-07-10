@@ -10,20 +10,8 @@
 
 <body><div class="contentBox" id="contentBox">
         <h1>JKU Linz School of Education</h1>
-        
-	<!--	<div class="card"><a class="card-link" title="Elementary School Math: 300+ Resources" href=/m/xnrmmkjt>
-			<div class="card-image" id="card-image"></div>
-			<div class="card-content">
-				<h3 class="card-title" id="card-title"></h3>
-				<div class="card-type" id="card-type"></div>
-				<p class="card-author" id=="card-author"></p>
-			</div>
-		</a>
-		</div>
-		-->
+        <br>
 		<ul id="cardList"></ul>
-    
-	
 </div>
 
 
@@ -49,7 +37,7 @@ function createCard() {
   if (response) {
 	response = JSON.parse(response);
 	var filename = response.title;
-	var previewUrl = response.thumbUrl;	
+	var previewUrl = response.elements[0].previewUrl;	
 	var type = response.type;
 	var author = response.creator.displayname;
 	
@@ -65,9 +53,9 @@ function createCard() {
 				'<div class="card-type" id="card-type">'+ typeText +'</div>'+
 				'<p class="card-author" id=="card-author">'+ author +'</p>'+
 			'</div></a></div>';
-  var cardLI = document.createElement("LI");
-  cardLI.innerHTML = card;
-  document.getElementById("cardList").appendChild(cardLI);
+  var cardNode = document.createElement("LI");
+  cardNode.innerHTML = card;
+  document.getElementById("cardList").appendChild(cardNode);
   }
 };
   
