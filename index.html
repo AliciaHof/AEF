@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>Patterns</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="aef_style.css">
+		
+</head>
+
+<body><div class="contentBox" id="contentBox">
+        <h1>JKU Linz School of Education</h1>
+        
+	<!--	<div class="card"><a class="card-link" title="Elementary School Math: 300+ Resources" href=/m/xnrmmkjt>
+			<div class="card-image" id="card-image"></div>
+			<div class="card-content">
+				<h3 class="card-title" id="card-title"></h3>
+				<div class="card-type" id="card-type"></div>
+				<p class="card-author" id=="card-author"></p>
+			</div>
+		</a>
+		</div>
+		-->
+		<ul id="cardList"></ul>
+    
+	
+</div>
+
+
+<script>
+
+var id = 'RHYH3UQ8';
+
+ if (window.addEventListener){
+        window.addEventListener('load', createCard);
+	}
+    else if (window.attachEvent){
+        window.attachEvent('onload', createCard);
+	}
+
+
+function createCard(id) {
+  var xhttp = new XMLHttpRequest();
+  
+  xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+   var response = xhttp.responseText;
+  
+  if (response) {
+	response = JSON.parse(response);
+	var filename = response.title;
+	var previewUrl = response.thumbUrl;	
+	var type = response.type;
+	var author = response.creator.displayname;
+	
+  }
+  
+  var typeText = type=='ws'? "Activity" : "Book";
+  
+  var card = 
+		'<div class="card"><a class="card-link" title="'+ filename +'" href="https://www.geogebra.org/m/'+ id +'">'+
+			'<div class="card-image" id="card-image"><img alt="" src="' + previewUrl +'" ></div>'+
+			'<div class="card-content">'+
+				'<h3 class="card-title" id="card-title">'+ filename +'</h3>'+
+				'<div class="card-type" id="card-type">'+ typeText +'</div>'+
+				'<p class="card-author" id=="card-author">'+ author +'</p>'+
+			'</div></a></div>';
+  var cardLI = document.createElement("LI");
+  cardLI.innerHTML = card;
+  document.getElementById("cardList").appendChild(cardLI);
+  }
+};
+  
+  xhttp.open("GET", "https://api.geogebra.org/v1.0/materials/RHYH3UQ8?scope=basic&embed=creator", true);
+  xhttp.send();
+ 
+}
+</script>
+
+</body>
+
+</html>
