@@ -1,0 +1,113 @@
+<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="890" height="350" viewBox="-445 -175 890 350" class="network-map">
+	<style  type="text/css">
+	
+svg.network-map {
+    background: #fafafa;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+line {
+    stroke: #e0e0e0;
+}
+a {
+    outline: none;
+}
+ a:hover {
+    z-index: 1000;
+}
+
+a circle {
+    transition: r .3s,fill .3s;
+    fill: #bdbdbd;
+}
+a.active circle {
+    fill: #d1cdf2;
+    stroke: #b2abe9;
+    stroke-width: 2px;
+}
+a:hover circle {
+    fill: #d1cdf2;
+    stroke: #7c70d9 !important;
+    stroke-width: 2px;
+	r:18.75;
+}
+
+a text {
+    font-size: 12px;
+    text-anchor: middle;
+    transition: font-weight .3s,font-size .3s,transform .3s;
+}
+a.active text {
+    font-weight: 600;
+}
+a:hover text {
+    font-size: 13px;
+    font-weight: 600;
+	transform:translateY(8.4px)!important;
+}
+	</style>
+	
+	
+	<line class="child" x1="0.8610661694224023" x2="-90.64319799306763" y1="-2.9594322317162143" y2="64.68161196910495"/>
+	<line class="child" x1="0.8610661694224023" x2="18.986504306475343" y1="-2.9594322317162143" y2="-114.91845264659582"/>
+	<line class="child" x1="0.8610661694224023" x2="61.16321487522115" y1="-2.9594322317162143" y2="93.07654371471959"/>
+	<line class="child" x1="0.8610661694224023" x2="-111.61802954127681" y1="-2.9594322317162143" y2="-19.028986555228858"/>
+	<line class="child" x1="0.8610661694224023" x2="97.21692253373713" y1="-2.9594322317162143" y2="-62.59307744374226"/>
+	<line class="child" x1="0.8610661694224023" x2="-18.563742661624197" y1="-2.9594322317162143" y2="109.16089790370881"/>
+	<line class="child" x1="0.8610661694224023" x2="-67.72977113088548" y1="-2.9594322317162143" y2="-93.31428272151518"/>
+	<line class="child" x1="0.8610661694224023" x2="110.33013808153882" y1="-2.9594322317162143" y2="25.89045311106531"/>
+	<a class="target active" href="/t/math" aria-current="page">
+		<circle cx="0.8610661694224023" cy="-2.9594322317162143" r="15"/>
+		<text x="0.8610661694224023" y="25.040567768283786">
+			<tspan>Patterns</tspan>
+		</text>
+	</a>
+	<a class="child" href="/amaze.html">
+		<circle cx="-90.64319799306763" cy="64.68161196910495" r="10"/>
+		<text x="-90.64319799306763" y="87.68161196910495">
+			<tspan>aMaze</tspan>
+		</text>
+	</a>
+	<a class="child" href="/origami.html">
+		<circle cx="18.986504306475343" cy="-114.91845264659582" r="10"/>
+		<text x="18.986504306475343" y="-91.91845264659582">
+			<tspan>Origami</tspan>
+		</text>
+	</a>
+	<a class="child" href="/cookies.html">
+		<circle cx="61.16321487522115" cy="93.07654371471959" r="10"/>
+		<text x="61.16321487522115" y="116.07654371471959">
+			<tspan>Cookies</tspan>
+		</text>
+	</a>
+	<a class="child" href="/motions.html">
+		<circle cx="-111.61802954127681" cy="-19.028986555228858" r="10"/>
+		<text x="-111.61802954127681" y="3.971013444771142">
+			<tspan>Motions</tspan>
+		</text>
+	</a>
+	<a class="child" href="/ozobots.html">
+		<circle cx="97.21692253373713" cy="-62.59307744374226" r="10"/>
+		<text x="97.21692253373713" y="-39.59307744374226">
+			<tspan>Ozobots</tspan>
+		</text>
+	</a>
+	<a class="child" href="/simulations.html">
+		<circle cx="-18.563742661624197" cy="109.16089790370881" r="10"/>
+		<text x="-18.563742661624197" y="132.16089790370881">
+			<tspan>Simulations</tspan>
+		</text>
+	</a>
+	<a class="child" href="/lichtenberg.html">
+		<circle cx="-67.72977113088548" cy="-93.31428272151518" r="10"/>
+		<text x="-67.72977113088548" y="-70.31428272151518">
+			<tspan>Lichtenberg</tspan>
+		</text>
+	</a>
+	<a class="child" href="/oscillations.html">
+		<circle cx="110.33013808153882" cy="25.89045311106531" r="10"/>
+		<text x="110.33013808153882" y="48.89045311106531">
+			<tspan>Oscillations</tspan>
+		</text>
+	</a>
+</svg>

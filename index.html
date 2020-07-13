@@ -11,23 +11,31 @@
 <body><div class="contentBox" id="contentBox">
         <h1>JKU Linz School of Education</h1>
         <br>
+		
+		<div id="menu"><object data="menu_patterns.svg" type="image/svg+xml" width="890" height="350"></object></div>
+		
 		<ul id="cardList"></ul>
 </div>
 
 
 <script>
 
-var id = 'RHYH3UQ8';
+var idList = ['RHYH3UQ8','tvvekv46','chs4jfvs', 'ts2adk9c', 'XUv5mXTm'];
 
  if (window.addEventListener){
-        window.addEventListener('load', createCard);
+        window.addEventListener('load', createAllCards);
 	}
     else if (window.attachEvent){
-        window.attachEvent('onload', createCard);
+        window.attachEvent('onload', createAllCards);
 	}
 
+function createAllCards(){
+	for(var i=0; i<idList.length; i++){
+		createCard(idList[i]);
+	}
+}
 
-function createCard() {
+function createCard(id) {
   var xhttp = new XMLHttpRequest();
   
   xhttp.onreadystatechange = function() {
@@ -37,7 +45,9 @@ function createCard() {
   if (response) {
 	response = JSON.parse(response);
 	var filename = response.title;
-	var previewUrl = response.elements[0].previewUrl;	
+	var previewUrl = response.thumbUrl;
+	// seems to be a bug in api -> returns "...$1.png" instead of "...@1.png"
+	var previewImg = previewUrl.substr(0,previewUrl.length-6) + '@l.png';
 	var type = response.type;
 	var author = response.creator.displayname;
 	
@@ -47,7 +57,7 @@ function createCard() {
   
   var card = 
 		'<div class="card"><a class="card-link" title="'+ filename +'" href="https://www.geogebra.org/m/'+ id +'" target="_blank">'+
-			'<div class="card-image" id="card-image"><img alt="" src="' + previewUrl +'" ></div>'+
+			'<div class="card-image" id="card-image"><img alt="" src="' + previewImg +'" ></div>'+
 			'<div class="card-content">'+
 				'<h3 class="card-title" id="card-title">'+ filename +'</h3>'+
 				'<div class="card-type" id="card-type">'+ typeText +'</div>'+
@@ -63,6 +73,10 @@ function createCard() {
   xhttp.send();
  
 }
+
+
+
+
 </script>
 
 </body>
