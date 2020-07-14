@@ -5,79 +5,88 @@
         <title>Patterns</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" href="aef_style.css">
+		<script src="navigation.js"></script>
 		
 </head>
 
-<body><div class="contentBox" id="contentBox">
+<body>
+
+<div class="contentBox" id="contentBox">
         <h1>JKU Linz School of Education</h1>
         <br>
 		
-		<div id="menu"><object data="menu_patterns.svg" type="image/svg+xml" width="890" height="350"></object></div>
+		<div id="menu">		
+<svg class="network-map" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="890" height="350" viewBox="-445 -175 890 350" >
+	
+	<line class="child" x1="0.8610661694224023" x2="-90.64319799306763" y1="-2.9594322317162143" y2="64.68161196910495"/>
+	<line class="child" x1="0.8610661694224023" x2="18.986504306475343" y1="-2.9594322317162143" y2="-114.91845264659582"/>
+	<line class="child" x1="0.8610661694224023" x2="61.16321487522115" y1="-2.9594322317162143" y2="93.07654371471959"/>
+	<line class="child" x1="0.8610661694224023" x2="-111.61802954127681" y1="-2.9594322317162143" y2="-19.028986555228858"/>
+	<line class="child" x1="0.8610661694224023" x2="97.21692253373713" y1="-2.9594322317162143" y2="-62.59307744374226"/>
+	<line class="child" x1="0.8610661694224023" x2="-18.563742661624197" y1="-2.9594322317162143" y2="109.16089790370881"/>
+	<line class="child" x1="0.8610661694224023" x2="-67.72977113088548" y1="-2.9594322317162143" y2="-93.31428272151518"/>
+	<line class="child" x1="0.8610661694224023" x2="110.33013808153882" y1="-2.9594322317162143" y2="25.89045311106531"/>
+	
+	<a class="child active" href="#" onClick="createCardSet(idList); setActive(this);">
+		<circle cx="0.8610661694224023" cy="-2.9594322317162143" r="15"/>
+		<text x="0.8610661694224023" y="25.040567768283786">
+			<tspan>Patterns</tspan>
+		</text>
+	</a>
+	<a class="child" href="/amaze.html">
+		<circle cx="-90.64319799306763" cy="64.68161196910495" r="10"/>
+		<text x="-90.64319799306763" y="87.68161196910495">
+			<tspan>aMaze</tspan>
+		</text>
+	</a>
+	<a class="child" href="#" onClick="createCardSet(idListOrigami); setActive(this);">
+		<circle cx="18.986504306475343" cy="-114.91845264659582" r="10"/>
+		<text x="18.986504306475343" y="-91.91845264659582">
+			<tspan>Origami</tspan>
+		</text>
+	</a>
+	<a class="child" href="/cookies.html">
+		<circle cx="61.16321487522115" cy="93.07654371471959" r="10"/>
+		<text x="61.16321487522115" y="116.07654371471959">
+			<tspan>Cookies</tspan>
+		</text>
+	</a>
+	<a class="child" href="/motions.html">
+		<circle cx="-111.61802954127681" cy="-19.028986555228858" r="10"/>
+		<text x="-111.61802954127681" y="3.971013444771142">
+			<tspan>Motions</tspan>
+		</text>
+	</a>
+	<a class="child" href="/ozobots.html">
+		<circle cx="97.21692253373713" cy="-62.59307744374226" r="10"/>
+		<text x="97.21692253373713" y="-39.59307744374226">
+			<tspan>Ozobots</tspan>
+		</text>
+	</a>
+	<a class="child" href="/simulations.html">
+		<circle cx="-18.563742661624197" cy="109.16089790370881" r="10"/>
+		<text x="-18.563742661624197" y="132.16089790370881">
+			<tspan>Simulations</tspan>
+		</text>
+	</a>
+	<a class="child" href="/lichtenberg.html">
+		<circle cx="-67.72977113088548" cy="-93.31428272151518" r="10"/>
+		<text x="-67.72977113088548" y="-70.31428272151518">
+			<tspan>Lichtenberg</tspan>
+		</text>
+	</a>
+	<a class="child" href="/oscillations.html">
+		<circle cx="110.33013808153882" cy="25.89045311106531" r="10"/>
+		<text x="110.33013808153882" y="48.89045311106531">
+			<tspan>Oscillations</tspan>
+		</text>
+	</a>
+</svg>
+		</div>
 		
+		<!-- navigation.js inserts resource cards here as li items -->
 		<ul id="cardList"></ul>
 </div>
-
-
-<script>
-
-var idList = ['RHYH3UQ8','tvvekv46','chs4jfvs', 'ts2adk9c', 'XUv5mXTm'];
-
- if (window.addEventListener){
-        window.addEventListener('load', createAllCards);
-	}
-    else if (window.attachEvent){
-        window.attachEvent('onload', createAllCards);
-	}
-
-function createAllCards(){
-	for(var i=0; i<idList.length; i++){
-		createCard(idList[i]);
-	}
-}
-
-function createCard(id) {
-  var xhttp = new XMLHttpRequest();
-  
-  xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-   var response = xhttp.responseText;
-  
-  if (response) {
-	response = JSON.parse(response);
-	var filename = response.title;
-	var previewUrl = response.thumbUrl;
-	// seems to be a bug in api -> returns "...$1.png" instead of "...@1.png"
-	var previewImg = previewUrl.substr(0,previewUrl.length-6) + '@l.png';
-	var type = response.type;
-	var author = response.creator.displayname;
-	
-  }
-  
-  var typeText = type=='ws'? "Activity" : "Book";
-  
-  var card = 
-		'<div class="card"><a class="card-link" title="'+ filename +'" href="https://www.geogebra.org/m/'+ id +'" target="_blank">'+
-			'<div class="card-image" id="card-image"><img alt="" src="' + previewImg +'" ></div>'+
-			'<div class="card-content">'+
-				'<h3 class="card-title" id="card-title">'+ filename +'</h3>'+
-				'<div class="card-type" id="card-type">'+ typeText +'</div>'+
-				'<p class="card-author" id=="card-author">'+ author +'</p>'+
-			'</div></a></div>';
-  var cardNode = document.createElement("LI");
-  cardNode.innerHTML = card;
-  document.getElementById("cardList").appendChild(cardNode);
-  }
-};
-  
-  xhttp.open("GET", "https://api.geogebra.org/v1.0/materials/" + id + "?scope=basic&embed=creator", true);
-  xhttp.send();
- 
-}
-
-
-
-
-</script>
 
 </body>
 
