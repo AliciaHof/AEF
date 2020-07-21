@@ -1,5 +1,121 @@
+/* Entry Page index.html */
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.sujet {
+	width: 100%;
+	/*background-color: #e4e4e4;*/
+}
+.sujet img {
+	width: 100%;
+	max-width: 900px;
+	position: relative;
+	left: 50%;
+	-ms-transform: translate(-50%);
+	transform: translate(-50%);
+}
+
+
+.jkuLogo img {
+	width: 50%;
+	max-width: 600px;
+	position: relative;
+	left: 50%;
+	-ms-transform: translate(-50%);
+	transform: translate(-50%);
+}
+
+.title {
+	font-size: 500%;
+	font-weight: 500;
+	font-family: Roboto,sans-serif;
+	color: #410000;
+	position: relative;
+	padding: 24px;
+	margin-top: 48px;
+	margin-bottom: 0px;
+	text-align: center;
+	background-color: white;
+}
+.jkuLogo .presented {
+	font-size: 200%;
+	font-weight: 400;
+	font-family: Roboto,sans-serif;
+	color: black;
+	position: relative;
+	margin-top: 48px;
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+/* Content Pages */
+
+.banner {
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+	padding: 0px;
+    box-sizing: border-box;
+	
+    background-color: #fff;
+	color: rgba(0,0,0,0.87);
+	font-size: 100%;
+	z-index: 2100;
+}
+.banner h1 {
+	font-family:Roboto,sans-serif;
+	font-size: 250%;
+    line-height: 52px;
+    margin: 6px 0px;
+	float: left;
+	color: #9c477b;
+}
+
+.jkuLogoBanner {
+	float: left;
+	height: 36px;
+	margin: 14px 24px;
+}
+.gardenLogo {
+	float: right;
+	margin: 8px;
+	margin-right: 24px;
+	height: 48px;
+}
+
+
 .contentBox {
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+	margin-top: 64px;
+	
+}
+
+.menuBox {
+	background: #fafafa;
+}
+.menuBox svg {
+	position: relative;
+	left: 50%;
+	-ms-transform: translate(-50%);
+	transform: translate(-50%);	
 }
 
 li {
@@ -85,7 +201,7 @@ li {
     order: -1;
 }
 .card-author {
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 24px;
     height: 24px;
 	margin: 0;
@@ -95,6 +211,7 @@ li {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 
 svg.network-map {
     background: #fafafa;
@@ -116,20 +233,20 @@ svg.network-map a circle {
     fill: #bdbdbd;
 }
 svg.network-map a.active circle {
-    fill: #d1cdf2;
-    stroke: #b2abe9;
+    fill: #9c477b;
+    stroke: #7c466f;
     stroke-width: 2px;
 	r:15;
 }
 svg.network-map a:hover circle {
-    fill: #d1cdf2;
-    stroke: #7c70d9 !important;
+    fill: #9c477b;
+    stroke: #7c466f; !important;
     stroke-width: 2px;
 	r:18.75;
 }
 
 svg.network-map a text {
-    font-size: 12px;
+    font-size: 13px;
     text-anchor: middle;
     transition: font-weight .3s,font-size .3s,transform .3s;
 }
@@ -138,7 +255,7 @@ svg.network-map a.active text {
 	transform:translateY(6px)!important;
 }
 svg.network-map a:hover text {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 	transform:translateY(8.4px)!important;
 }
