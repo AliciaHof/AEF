@@ -17,9 +17,7 @@
 	<img class="gardenLogo" src="aef_garden_logo.svg" alt="Ars Electronica Festival Garden Logo">
 </div>
 
-<div class="contentBox" id="contentBox">
-		
-	<div id="menu" class="menuBox">		
+<div id="menu" class="menuBox contentBox">		
 <svg class="network-map" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="890" height="350" viewBox="-445 -175 890 350" >
 	
 	<line class="child" x1="0.8610661694224023" x2="-90.64319799306763" y1="-2.9594322317162143" y2="64.68161196910495"/>
@@ -31,13 +29,13 @@
 	<line class="child" x1="0.8610661694224023" x2="-67.72977113088548" y1="-2.9594322317162143" y2="-93.31428272151518"/>
 	<line class="child" x1="0.8610661694224023" x2="110.33013808153882" y1="-2.9594322317162143" y2="25.89045311106531"/>
 	
-	<a class="child active" href="#" onClick="createCardSet(idList); setActive(this);">
+	<a class="child active" href="#" onClick="createCardSet(idBookList); setActive(this);">
 		<circle cx="0.8610661694224023" cy="-2.9594322317162143" r="15"/>
 		<text x="0.8610661694224023" y="27.040567768283786">
 			<tspan>Patterns</tspan>
 		</text>
 	</a>
-	<a class="child" href="/amaze.html">
+	<a class="child" href="#" onClick="createCardSet(idListAmaze); setActive(this);">
 		<circle cx="-90.64319799306763" cy="64.68161196910495" r="10"/>
 		<text x="-90.64319799306763" y="89.68161196910495">
 			<tspan>aMaze</tspan>
@@ -87,9 +85,11 @@
 	</a>
 </svg>
 		</div>
-		
-		<!-- navigation.js inserts resource cards here as li items -->
-		<ul id="cardList"></ul>
+
+
+
+<div id="contentBox" class="contentBox">
+	<ul id="cardList"><!-- navigation.js inserts resource cards here as li items --></ul>
 </div>
 
 </body>

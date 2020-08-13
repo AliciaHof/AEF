@@ -1,28 +1,40 @@
 
 /* Lists of resource collections to load when clicking through map */
-var idList = ['pmtx7jvh','f2sjzykh','chs4jfvs', 'ts2adk9c', 'XUv5mXTm'];
+var idBookList = ['pmtx7jvh','f2sjzykh','djksadxg'];
 var idListOrigami = ['xmxtuapd','wmq7a7hx','xkmqq4m6','j3t2wceu','kegj5vy8','jfaaar2m','mgk2chdc'];
+var idListAmaze = ['q4w36azf','upukzu3y','wk6bm7pg','s3v96xcz','uxtswymp','aunyaejn','kxxtz9hp','rympvxtm','ftfw42tv','uccbpvjk'];
 
-
- if (window.addEventListener){
-        window.addEventListener('load', createCardSet(idList));
+if (window.addEventListener){
+        window.addEventListener('load', insertContent);
 	}
     else if (window.attachEvent){
-        window.attachEvent('onload', createCardSet(idList));
+        window.attachEvent('onload', insertContent);
 	}
+	
+function insertContent(){
+	if(document.readyState === 'complete'){
+		createCardSet(idBookList);
+	}
+	}
+
 
 /* called by clicking map nodes */
 function createCardSet(list){
+	
 	if(document.getElementById("cardList")){
 		document.getElementById("cardList").innerHTML = ' ';
+	} 
+	for(i = 0; i < list.length; i++){
+		document.getElementById("cardList").appendChild(document.createElement("LI"));
 	}
 	for (let id of list){
-		createCard(id);
+		createCard(id, list.indexOf(id)+1);
 	}
+	
 }
 
 /* creates a single card */
-function createCard(id) {
+function createCard(id, index) {
   var xhttp = new XMLHttpRequest();
   
    /* GeoGebra Website API call */
@@ -36,14 +48,17 @@ function createCard(id) {
 	  if (response) {
 		response = JSON.parse(response);
 		var filename = response.title;
-		var previewUrl = response.thumbUrl;
-		// seems to be a bug in api -> returns "...$1.png" instead of "...@1.png"
-		var previewImg = previewUrl.substr(0,previewUrl.length-6) + '@l.png';
+		if(response.thumbUrl){
+			var previewUrl = response.thumbUrl;
+			// seems to be a bug in api -> returns "...$1.png" instead of "...@1.png"
+			var previewImg = previewUrl.substr(0,previewUrl.length-6) + '@l.png';
+		} else {
+			var previewImg = '';
+		}
 		var type = response.type;
 		var author = response.creator.displayname;
 		
 	  }
-	  
 	  var typeText = type=='ws'? "Activity" : "Book";
 	  
 	  var card = 
@@ -54,9 +69,8 @@ function createCard(id) {
 					'<div class="card-type" id="card-type">'+ typeText +'</div>'+
 					'<p class="card-author" id=="card-author">'+ author +'</p>'+
 				'</div></a></div>';
-	  var cardNode = document.createElement("LI");
-	  cardNode.innerHTML = card;
-	 document.getElementById("cardList").appendChild(cardNode);
+				
+	  document.getElementById("cardList").childNodes[index].innerHTML = card;
 	  }
 	}; 
 }
@@ -66,6 +80,3 @@ function setActive(node){
 	document.getElementsByClassName("child active")[0].classList.remove('active');
 	node.classList.add('active');
 }
-
-
-
