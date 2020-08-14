@@ -100,7 +100,7 @@ function showGetStarted(){
 	} 
 	var getStarted =
 	'<div id="getStarted" class="getStarted">'+
-	'The topic map above is interactive and allows you to navigate through the workshop. Select a topic to get a list of related informations. Select the cards below the topic map to start exploring. '+
+	'The topic map above is interactive and allows you to navigate through the workshop.<br>Select a topic to get a list of related informations. Select the cards below the topic map to start exploring. '+
 	'All topics are organized in so called GeoGebra Books and Activities, with a Book being a collection of Activities. Every workshop part is collected in one '+
 	'GeoGebra Book with all information structured in chapters and pages. Within the Books you can find links to related topics from other workshop parts. This way you have multiple options how to navigate '+
 	'through the workshops. You can work through the book if you want to stay within the topic, follow the links in the Books to switch to other workshop parts or use the topic map to find information.<br><br>'+
@@ -142,6 +142,13 @@ function showAbout(){
 	'Uwe Monkowius, '+
 	'Martin Ertl, '+
 	'Lena Schildberger<br><br>'+
+	
+	'<b>Social Media</b><br>'+
+	'@geogebraoriginlab<br>'+
+	'#steampopuplab<br>'+
+	'<a href="https://www.youtube.com/channel/UC652yTM9rzmd3i3498fGdlA" target="_blank">YouTube</a>&nbsp;|&nbsp;'+
+	'<a href="https://www.instagram.com/geogebraoriginlab/" target="_blank">Instagram</a><br><br>'+
+	
 	'<b>Contact</b><br>'+
 	'<a href="mailto:alicia.hofstaetter@geogebra.org">Alicia Hofstätter</a>'+
 	'</div>';
