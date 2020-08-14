@@ -13,9 +13,10 @@ if (window.addEventListener){
 	
 function insertContent(){
 	if(document.readyState === 'complete'){
-		createCardSet(idBookList);
+	//	createCardSet(idBookList);
+		showGetStarted();
 	}
-	}
+}
 
 
 /* called by clicking map nodes */
@@ -75,8 +76,89 @@ function createCard(id, index) {
 	}; 
 }
 
+function showMissionStatement(){
+	if(document.getElementById("cardList")){
+		document.getElementById("cardList").innerHTML = ' ';
+	} 
+	var missionStatement =
+	'<div id="statement" class="statement">As the borders of subjects in schools are rather artificial and hardly mirror the diversity of knowledge needed to deeply understand important matters, '+
+	'the STEAM Popup Lab aims to blur those borders and highlight the importance of collaboration between the sciences. Educators from all STEAM education departments work together to '+
+	'create unique and engaging workshops of different size and complexity that evolve around the same topic and highlight different perspectives. As interests and learning types vary in '+
+	'the population, the STEAM Popup Lab offers the possibility to create one\'s own learning path by moving within a net of educational experiences, where one can choose which direction to take.'+
+	'To showcase this interdisciplinary and individual way of learning the STEAM Popup Lab at the Ars Electronica Festival evolves around the topic of patterns. We can find patterns everywhere, '+
+	'from fractals in nature, blood vessels in the human body to oscillating signals produced by the sensors of a phone.<br><br>'+
+	'We want to create a showcase on how easy it can be to create online experiences using existing technology and cost-free platforms. For example, instead of using special camera equipment, '+
+	'all filming and streaming is done using smartphones, tablets and standard webcams as the quality of video and audio is quite good in modern devices. For uploading and presenting images and videos free platforms '+
+	'like Instagram and Youtube are used. Live sessions are done using Zoom. GeoGebra apps are used to create quizzes and interactive tasks.'+
+	'</div>';
+	document.getElementById("cardList").innerHTML = missionStatement;
+}
+
+function showGetStarted(){
+	if(document.getElementById("cardList")){
+		document.getElementById("cardList").innerHTML = ' ';
+	} 
+	var getStarted =
+	'<div id="getStarted" class="getStarted">'+
+	'The topic map above is interactive and allows you to navigate through the workshop. Select a topic to get a list of related informations. Select the cards below the topic map to start exploring. '+
+	'All topics are organized in so called GeoGebra Books and Activities, with a Book being a collection of Activities. Every workshop part is collected in one '+
+	'GeoGebra Book with all information structured in chapters and pages. Within the Books you can find links to related topics from other workshop parts. This way you have multiple options how to navigate '+
+	'through the workshops. You can work through the book if you want to stay within the topic, follow the links in the Books to switch to other workshop parts or use the topic map to find information.<br><br>'+
+	'<span style="color: #9c477b;"><b>Have fun exploring!</b></span>'+
+	'</div>';
+	document.getElementById("cardList").innerHTML = getStarted;
+}
+
+function showAbout(){
+	if(document.getElementById("cardList")){
+		document.getElementById("cardList").innerHTML = ' ';
+	} 
+	var about =
+	'<div id="about" class="about">'+
+	'<b>JKU Linz School of Education</b><br>'+
+	'Established in 2016, the Linz School of Education pools the JKU\'s resources and activities in education across faculties, particularly in the fields of educational research and education in mathematics, '+
+	'computer science and natural sciences (STEM subjects): <br>'+
+	'<ul><li>Curricula for programs in Teacher Education Studies (Secondary Level), Business Education, the Master\'s degree program in Political Education, Graduate Degree Program in School Management, '+
+	'Subject-Related Education, doctorate degree programs (PhD in Education), Humanities and Cultural Studies, Social Sciences, Economics, and Business </li>'+
+	'<li>Research in Education Sciences and Subject-Related Education </li>'+
+	'<li>Support for junior researchers and young scholars in the doctorate degree programs </li></ul><br>'+
+	
+	'<b>Credits</b><br>'+
+	'Markus Hohenwarter, '+
+	'Alicia Hofstätter, '+
+	'Christina Krenn, '+
+	'Viktoria Edlbauer, '+
+	'Alexander Thaller, '+
+	'Barbara Sabitzer, '+
+	'Corinna Hörmann, '+
+	'Zsolt Lavicza, '+
+	'Kristof Fenyvesi, '+
+	'Eva Ulbrich, '+
+	'Julia Handl, '+
+	'Eva Bauer-Öppinger, '+
+	'Susanne Thrainer, '+
+	'Florian Hischen, '+
+	'Ingrid Graz, '+
+	'Uwe Monkowius, '+
+	'Martin Ertl, '+
+	'Lena Schildberger<br><br>'+
+	'<b>Contact</b><br>'+
+	'<a href="mailto:alicia.hofstaetter@geogebra.org">Alicia Hofstätter</a>'+
+	'</div>';
+	document.getElementById("cardList").innerHTML = about;
+}
+
+
 /* set node active for correct css */
 function setActive(node){
-	document.getElementsByClassName("child active")[0].classList.remove('active');
+
+	if(document.getElementsByClassName("footerLink active").length > 0){
+		document.getElementsByClassName("footerLink active")[0].classList.remove('active');
+	}
+	
+	if(document.getElementsByClassName("child active").length > 0){
+		document.getElementsByClassName("child active")[0].classList.remove('active');
+	}
 	node.classList.add('active');
+	
 }
