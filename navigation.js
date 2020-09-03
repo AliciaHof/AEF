@@ -159,7 +159,7 @@ function createImages(){
 	if(document.getElementById("cardList")){
 		document.getElementById("cardList").innerHTML = ' ';
 	} 
-	var dir = "exhibition/";
+	var dir = "tree/master/exhibition/";
 	var fileextension = ".jpeg";
 	$.ajax({
 		//This will retrieve the contents of the folder if the folder is configured as 'browsable'
