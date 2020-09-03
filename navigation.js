@@ -159,19 +159,19 @@ function createImages(){
 	if(document.getElementById("cardList")){
 		document.getElementById("cardList").innerHTML = ' ';
 	} 
-	 var dir = "exhibition/";
-var fileextension = ".jpeg";
-$.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: dir,
-    success: function (data) {
-        //List all .png file names in the page
-        $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href.replace(window.location.host, "").replace("http://", "");
-            $("cardList").append("<img src='" + dir + filename + "'>");
-        });
-    }
-});
+	var dir = "exhibition/";
+	var fileextension = ".jpeg";
+	$.ajax({
+		//This will retrieve the contents of the folder if the folder is configured as 'browsable'
+		url: dir,
+		success: function (data) {
+			//List all .png file names in the page
+			$(data).find("a:contains(" + fileextension + ")").each(function () {
+				var filename = this.href.replace(window.location.host, "").replace("http://", "");
+				$("body").append("<img src='" + dir + filename + "'>");
+			});
+		}
+	});
 }
 
 
