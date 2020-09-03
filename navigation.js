@@ -1,7 +1,7 @@
 
 /* Lists of resource collections to load when clicking through map */
-var idBookList = ['pmtx7jvh','f2sjzykh','djksadxg'];
-var idListOrigami = ['xmxtuapd','wmq7a7hx','xkmqq4m6','j3t2wceu','kegj5vy8','jfaaar2m','mgk2chdc'];
+var idBookList = ['wzg45hfn','djksadxg'];
+var idListOrigami = ['scukhsse','wjeaummu','fzf5zmgh','hzfyav6x','bu3h9qjk','ndcrqnzg','vwfx6pcf','a8eb9hnf','wvmkbsae','e9wpzmaj','tkgzyqgv','yc25bsar','uxejadcb','xzrj7jh5','eqwcpsgf','sydtbwwt','wk7m5db7','pephf9at','bep6fxye','g8y7ujg7','d7wvvqnd','ernjttwx','dcscjkzr','uc4meybq','pbayvdav','cqfujybd','x72hansc','u86fbqqc','qnkf53gx','dah5e6bm'];
 var idListAmaze = ['q4w36azf','upukzu3y','wk6bm7pg','s3v96xcz','uxtswymp','aunyaejn','kxxtz9hp','rympvxtm','ftfw42tv','uccbpvjk'];
 
 if (window.addEventListener){
@@ -153,6 +153,25 @@ function showAbout(){
 	'<a href="mailto:alicia.hofstaetter@geogebra.org">Alicia Hofstätter</a>'+
 	'</div>';
 	document.getElementById("cardList").innerHTML = about;
+}
+
+function createImages(){
+	if(document.getElementById("cardList")){
+		document.getElementById("cardList").innerHTML = ' ';
+	} 
+	 var dir = "exhibition/";
+var fileextension = ".jpeg";
+$.ajax({
+    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+    url: dir,
+    success: function (data) {
+        //List all .png file names in the page
+        $(data).find("a:contains(" + fileextension + ")").each(function () {
+            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+            $("cardList").append("<img src='" + dir + filename + "'>");
+        });
+    }
+});
 }
 
 
