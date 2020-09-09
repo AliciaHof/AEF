@@ -2,23 +2,110 @@
 <html lang="en">
 
 <head>
-    <title>Garden Linz</title>
+    <title>STEAM Popup Lab</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="robots" content="noindex">
+	<meta name="robots" content="noindex">
+	<link rel="stylesheet" href="aef_style.css">
     <!-- TODO: Replace `favicon.png` with an image that makes sense! -->
     <link rel="shortcut icon" href="favicon.png">
-    <link rel="stylesheet" href="aef_style.css">
+    <script src="navigation.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body style="background-color: #e4e4e4;">
-<a href="patterns.html">
-    <div class="sujet"><img src="BannerPartnerGarden.png" alt="Ars Electronica Festival 2020 Banner"></div>
-    <p class="title">STEAM Popup Lab</p>
-    <div class="jkuLogo">
-        <p class="presented">presented by</p>
-        <img src="SchoolOfEducation_Logo_landscape.svg" alt="Linz School of Education Logo">
+<body>
+
+<div class="banner">
+    <img class="jkuLogoBanner" src="SchoolOfEducation_Logo_landscape_lila.svg" alt="JKU Linz School of Education Logo">
+    <h1>STEAM Popup Lab: Patterns</h1>
+    <img class="gardenLogo" src="LogoArsElectronicaFestival2020.svg" alt="Ars Electronica Festival Garden Logo">
+</div>
+
+<div id="menu" class="menuBox contentBox">
+    <svg class="network-map" xmlns="http://www.w3.org/2000/svg" width="890" height="300"
+         viewBox="-445 -145 890 300">
+
+        <line class="child" x1="0.8610661694224023" x2="-90.64319799306763" y1="-2.9594322317162143"
+              y2="64.68161196910495"/>
+        <line class="child" x1="0.8610661694224023" x2="18.986504306475343" y1="-2.9594322317162143"
+              y2="-114.91845264659582"/>
+        <line class="child" x1="0.8610661694224023" x2="61.16321487522115" y1="-2.9594322317162143"
+              y2="93.07654371471959"/>
+        <line class="child" x1="0.8610661694224023" x2="-111.61802954127681" y1="-2.9594322317162143"
+              y2="-19.028986555228858"/>
+        <line class="child" x1="0.8610661694224023" x2="97.21692253373713" y1="-2.9594322317162143"
+              y2="-62.59307744374226"/>
+        <line class="child" x1="0.8610661694224023" x2="-18.563742661624197" y1="-2.9594322317162143"
+              y2="109.16089790370881"/>
+        <line class="child" x1="0.8610661694224023" x2="-67.72977113088548" y1="-2.9594322317162143"
+              y2="-93.31428272151518"/>
+        <line class="child" x1="0.8610661694224023" x2="110.33013808153882" y1="-2.9594322317162143"
+              y2="25.89045311106531"/>
+
+        <a class="child" href="#" onClick="createCardSet(idBookList,0); setActive(this);">
+            <circle cx="0.8610661694224023" cy="-2.9594322317162143" r="15"/>
+            <text x="0.8610661694224023" y="27.040567768283786">
+                <tspan>Workshops</tspan>
+            </text>
+        </a>
+        <a class="child" href="#" onClick="createKategoryCardSet(idListSimulations); setActive(this);">
+            <circle cx="-90.64319799306763" cy="64.68161196910495" r="10"/>
+            <text x="-90.64319799306763" y="89.68161196910495">
+                <tspan>Simulations</tspan>
+            </text>
+        </a>
+        <a class="child" href="#" onClick="createKategoryCardSet(idListVideos); setActive(this);">
+            <circle cx="18.986504306475343" cy="-114.91845264659582" r="10"/>
+            <text x="18.986504306475343" y="-89.91845264659582">
+                <tspan>Videos</tspan>
+            </text>
+        </a>
+        <a class="child" href="#" onClick="createKategoryCardSet(idListChallenges); setActive(this);">
+            <circle cx="61.16321487522115" cy="93.07654371471959" r="10"/>
+            <text x="61.16321487522115" y="118.07654371471959">
+                <tspan>Challenges</tspan>
+            </text>
+        </a>
+        <a class="child" href="#" onClick="createKategoryCardSet(idListExercises); setActive(this);">
+            <circle cx="-111.61802954127681" cy="-19.028986555228858" r="10"/>
+            <text x="-111.61802954127681" y="5.971013444771142">
+                <tspan>Exercises</tspan>
+            </text>
+        </a>
+        <a class="child" href="#" onClick="createKategoryCardSet(idListExperiments); setActive(this);">
+            <circle cx="97.21692253373713" cy="-62.59307744374226" r="10"/>
+            <text x="97.21692253373713" y="-37.59307744374226">
+                <tspan>Experiments</tspan>
+            </text>
+        </a>
+        <a class="child" href="#"  onClick="createKategoryCardSet(idListKnowledge); setActive(this);">
+            <circle cx="-18.563742661624197" cy="109.16089790370881" r="10"/>
+            <text x="-18.563742661624197" y="134.16089790370881">
+                <tspan>Knowledge</tspan>
+            </text>
+        </a>
+        <a class="child" href="#" onClick="createKategoryCardSet(idListLive); setActive(this);">
+            <circle cx="-67.72977113088548" cy="-93.31428272151518" r="10"/>
+            <text x="-67.72977113088548" y="-68.31428272151518">
+                <tspan>Real Live</tspan>
+            </text>
+        </a>
+        <a class="child" href="#" onClick="createKategoryCardSet(idListSurprise); setActive(this);">
+            <circle cx="110.33013808153882" cy="25.89045311106531" r="10"/>
+            <text x="110.33013808153882" y="50.89045311106531">
+                <tspan>Surprise me</tspan>
+            </text>
+        </a>
+    </svg>
+</div>
+
+<div id="contentBox" class="contentBox">
+    <div id="footer" class="footer">
+        <a class="footerLink active" href="#" onClick="showGetStarted(); setActive(this);">Get Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a class="footerLink" href="#" onClick="showMissionStatement(); setActive(this);">Mission Statement</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a class="footerLink" href="#" onClick="showAbout(); setActive(this);">About Us</a>
     </div>
-</a>
+    <ul id="cardList"><!-- navigation.js inserts resource cards here as li items --></ul>
+</div>
 
 </body>
 

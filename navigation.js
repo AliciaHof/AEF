@@ -1,8 +1,51 @@
 
 /* Lists of resource collections to load when clicking through map */
-var idBookList = ['wzg45hfn','djksadxg'];
-var idListOrigami = ['scukhsse','wjeaummu','fzf5zmgh','hzfyav6x','bu3h9qjk','ndcrqnzg','vwfx6pcf','a8eb9hnf','wvmkbsae','e9wpzmaj','tkgzyqgv','yc25bsar','uxejadcb','xzrj7jh5','eqwcpsgf','sydtbwwt','wk7m5db7','pephf9at','bep6fxye','g8y7ujg7','d7wvvqnd','ernjttwx','dcscjkzr','uc4meybq','pbayvdav','cqfujybd','x72hansc','u86fbqqc','qnkf53gx','dah5e6bm'];
-var idListAmaze = ['q4w36azf','upukzu3y','wk6bm7pg','s3v96xcz','uxtswymp','aunyaejn','kxxtz9hp','rympvxtm','ftfw42tv','uccbpvjk'];
+var idOrigamiBook = 'wzg45hfn';
+var idAmazeBook = 'djksadxg';
+var idOzobotBook = 'svqruqcj';
+var idExperienceBook = 'pkprccus';
+var idChemistryBook = 'axxkvtuf';
+var idPhysicsBook = 'et3exer9';
+var idCookieBook = 'jn6dgpjh';
+var idLichtenbergBook = 'vv4yzsmp';
+var idMotionBook = 'tathhjgw';
+var idBookList = [idOrigamiBook,idOzobotBook,idChemistryBook,idPhysicsBook,idLichtenbergBook,idAmazeBook,idCookieBook,idMotionBook,idExperienceBook];
+
+var idListChallenges = [['qnkf53gx',idOrigamiBook],['dah5e6bm',idOrigamiBook],['e3gfupm9',idOzobotBook],['uerrntac',idOzobotBook],
+						['devuttng',idOzobotBook],['t8haxdea',idPhysicsBook],['aaedbz5h',idPhysicsBook],['jvh9jc6p',idMotionBook],['b7f5dvme',idMotionBook]];
+
+var idListExperiments = [['rzkc4t8b',idChemistryBook],['z9nffzuh',idChemistryBook],['exhprgcs',idChemistryBook],['pgxnwvtr',idChemistryBook],
+						 ['hcje5dex',idChemistryBook],['rehr7kzr',idChemistryBook],['ds66hxnd',idChemistryBook],['jgwxmsbx',idChemistryBook],
+						 ['fqkhnyqa',idChemistryBook],['ckkbreue',idChemistryBook],['mzrqnbcn',idChemistryBook],['rpsrwc9c',idChemistryBook],
+						 ['tjy38cqm',idChemistryBook],['f9zmhbvw',idChemistryBook],['zdxarzp7',idChemistryBook],['jj6cxvjr',idChemistryBook],
+						 ['anatfqmg',idPhysicsBook],['jjxyr92a',idPhysicsBook],['hsq6wd98',idPhysicsBook],['xsufbdzc',idPhysicsBook],
+						 ['hjphe7mt',idPhysicsBook],['ztt9dbuk',idPhysicsBook],['qxrdwwks',idPhysicsBook],['aaedbz5h',idPhysicsBook],
+						 ['w8acptma',idPhysicsBook],['gs5refn5',idPhysicsBook],['a2uc9s5k',idPhysicsBook],['zga8vetb',idPhysicsBook],
+						 ['fu8wvkfx',idPhysicsBook],['eqjrspdn',idPhysicsBook],['rcvpbmzt',idPhysicsBook],['t8haxdea',idPhysicsBook]];
+
+var idListVideos = [[idLichtenbergBook,0],['wjeaummu',idOrigamiBook],['cqfujybd',idOrigamiBook],['y3nrkzpq',idOzobotBook],['wkta8znp',idExperienceBook],['jvh9jc6p',idMotionBook]];
+
+var idListKnowledge = [['upukzu3y',idAmazeBook],['wk6bm7pg',idAmazeBook],['s3v96xcz',idAmazeBook],['scukhsse',idOrigamiBook],
+					   ['wjeaummu',idOrigamiBook],['uxtswymp',idAmazeBook],['rympvxtm',idAmazeBook],['kxp8aquz',idPhysicsBook],
+					   ['zf5vt822',idPhysicsBook],['mkagnv5e',idOzobotBook],['qqjqyufk',idCookieBook],
+					   ['vwgfjt8k',idCookieBook],['v4dpxay6',idChemistryBook]];
+
+var idListSimulations = [['fzf5zmgh',idOrigamiBook],['hzfyav6x',idOrigamiBook],['bu3h9qjk',idOrigamiBook],['ndcrqnzg',idOrigamiBook],
+						 ['vwfx6pcf',idOrigamiBook],['a8eb9hnf',idOrigamiBook],['wvmkbsae',idOrigamiBook],
+						 ['nuhu8yck',idCookieBook],['cbvpqtmv',idCookieBook],['mqy5tvz7',idCookieBook]];
+						 
+var idListExercises = [['e9wpzmaj',idOrigamiBook],['tkgzyqgv',idOrigamiBook],['yc25bsar',idOrigamiBook],['uxejadcb',idOrigamiBook],
+				       ['xzrj7jh5',idOrigamiBook],['eqwcpsgf',idOrigamiBook],['sydtbwwt',idOrigamiBook],['wk7m5db7',idOrigamiBook],
+					   ['pephf9at',idOrigamiBook],['bep6fxye',idOrigamiBook],['g8y7ujg7',idOrigamiBook],['d7wvvqnd',idOrigamiBook],
+					   ['ernjttwx',idOrigamiBook]];
+				   
+var idListLive = [['u3sbprks',idChemistryBook],['gcnr6nwk',idAmazeBook],['jvh9jc6p',idMotionBook],['b7f5dvme',idMotionBook],['dcscjkzr',idOrigamiBook],['uc4meybq',idOrigamiBook],['pbayvdav',idOrigamiBook],
+				  ['cqfujybd',idOrigamiBook],['u86fbqqc',idOrigamiBook],['d7wvvqnd',idOrigamiBook],['ernjttwx',idOrigamiBook]];
+
+var idListSurprise = [['dcscjkzr',idOrigamiBook],['uc4meybq',idOrigamiBook],['pbayvdav',idOrigamiBook],['wk6bm7pg',idAmazeBook],['gcnr6nwk',idAmazeBook],
+					  ['fsbv9rks',idOzobotBook],['e3gfupm9',idOzobotBook],['ds66hxnd',idChemistryBook],['rpsrwc9c',idChemistryBook],['qxrdwwks',idPhysicsBook],
+					  ['fu8wvkfx',idPhysicsBook],['t8haxdea',idPhysicsBook],[idLichtenbergBook,0],['wkta8znp',idExperienceBook]];
+
 
 if (window.addEventListener){
         window.addEventListener('load', insertContent);
@@ -13,15 +56,13 @@ if (window.addEventListener){
 	
 function insertContent(){
 	if(document.readyState === 'complete'){
-	//	createCardSet(idBookList);
 		showGetStarted();
 	}
 }
 
 
 /* called by clicking map nodes */
-function createCardSet(list){
-	
+function createCardSet(list, book){
 	if(document.getElementById("cardList")){
 		document.getElementById("cardList").innerHTML = ' ';
 	} 
@@ -29,13 +70,27 @@ function createCardSet(list){
 		document.getElementById("cardList").appendChild(document.createElement("LI"));
 	}
 	for (let id of list){
-		createCard(id, list.indexOf(id)+1);
+		createCard(id, book, list.indexOf(id)+1);
+	}
+	
+}
+
+/* called by clicking map nodes */
+function createKategoryCardSet(doubleList){
+	if(document.getElementById("cardList")){
+		document.getElementById("cardList").innerHTML = ' ';
+	} 
+	for(i = 0; i < doubleList.length; i++){
+		document.getElementById("cardList").appendChild(document.createElement("LI"));
+	}
+	for (let list of doubleList){
+		createCard(list[0],list[1], doubleList.indexOf(list)+1);
 	}
 	
 }
 
 /* creates a single card */
-function createCard(id, index) {
+function createCard(id, book, index) {
   var xhttp = new XMLHttpRequest();
   
    /* GeoGebra Website API call */
@@ -49,21 +104,32 @@ function createCard(id, index) {
 	  if (response) {
 		response = JSON.parse(response);
 		var filename = response.title;
-		if(response.thumbUrl){
+		
+	  if(response.thumbUrl){
 			var previewUrl = response.thumbUrl;
-			// seems to be a bug in api -> returns "...$1.png" instead of "...@1.png"
-			var previewImg = previewUrl.substr(0,previewUrl.length-6) + '@l.png';
+			var previewImg;
+			// api seems to return various thumb links, some of them not correct?
+			if(previewUrl.includes("thumb.png")){
+				previewImg = previewUrl;
+			} else {
+				if(previewUrl.includes("thumb$1.png")){
+					previewImg = previewUrl.substr(0,previewUrl.length-6) + '.png';
+				} else {
+					previewImg = previewUrl.substr(0,previewUrl.length-6) + 'mb.png';
+				}
+			}
 		} else {
-			var previewImg = '';
+				previewImg = '';
 		}
 		var type = response.type;
 		var author = response.creator.displayname;
 		
 	  }
 	  var typeText = type=='ws'? "Activity" : "Book";
+	  var aLink = book == 0 ? 'https://www.geogebra.org/m/'+ id : 'https://www.geogebra.org/m/'+ book+'#material/'+ id;
 	  
 	  var card = 
-			'<div class="card"><a class="card-link" title="'+ filename +'" href="https://www.geogebra.org/m/'+ id +'" target="_blank">'+
+			'<div class="card"><a class="card-link" title="'+ filename +'" href="'+ aLink +'" target="_blank">'+
 				'<div class="card-image" id="card-image"><img alt="" src="' + previewImg +'" ></div>'+
 				'<div class="card-content">'+
 					'<h3 class="card-title" id="card-title">'+ filename +'</h3>'+
@@ -84,7 +150,7 @@ function showMissionStatement(){
 	'<div id="statement" class="statement">As the borders of subjects in schools are rather artificial and hardly mirror the diversity of knowledge needed to deeply understand important matters, '+
 	'the STEAM Popup Lab aims to blur those borders and highlight the importance of collaboration between the sciences. Educators from all STEAM education departments work together to '+
 	'create unique and engaging workshops of different size and complexity that evolve around the same topic and highlight different perspectives. As interests and learning types vary in '+
-	'the population, the STEAM Popup Lab offers the possibility to create one\'s own learning path by moving within a net of educational experiences, where one can choose which direction to take.'+
+	'the population, the STEAM Popup Lab offers the possibility to create one\'s own learning path by moving within a net of educational experiences, where one can choose which direction to take. '+
 	'To showcase this interdisciplinary and individual way of learning the STEAM Popup Lab at the Ars Electronica Festival evolves around the topic of patterns. We can find patterns everywhere, '+
 	'from fractals in nature, blood vessels in the human body to oscillating signals produced by the sensors of a phone.<br><br>'+
 	'We want to create a showcase on how easy it can be to create online experiences using existing technology and cost-free platforms. For example, instead of using special camera equipment, '+
@@ -99,12 +165,19 @@ function showGetStarted(){
 		document.getElementById("cardList").innerHTML = ' ';
 	} 
 	var getStarted =
+	'<div class="teaser"><iframe width="560" height="315" src="https://www.youtube.com/embed/o6I9wc3WHuI?modestbranding=1&color=white&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></div>'+
+	
 	'<div id="getStarted" class="getStarted">'+
-	'The topic map above is interactive and allows you to navigate through the workshop.<br>Select a topic to get a list of related informations. Select the cards below the topic map to start exploring. '+
-	'All topics are organized in so called GeoGebra Books and Activities, with a Book being a collection of Activities. Every workshop part is collected in one '+
-	'GeoGebra Book with all information structured in chapters and pages. Within the Books you can find links to related topics from other workshop parts. This way you have multiple options how to navigate '+
-	'through the workshops. You can work through the book if you want to stay within the topic, follow the links in the Books to switch to other workshop parts or use the topic map to find information.<br><br>'+
-	'<span style="color: #9c477b;"><b>Have fun exploring!</b></span>'+
+	'Use the <span style="color: #9c477b;">interactive topic map</span> above to navigate through the workshops!<br>'+
+	'Select <span style="color: #9c477b;">Patterns</span> in the middle to see all workshop books or choose a category to explore specific aspects. '+
+	'<br><br>'+
+	'Every book contains a single workshop. <span style="color: #9c477b;">Explore the books</span> if you want to stay within a topic, '+
+	'<span style="color: #9c477b;">follow the links</span> in the books to switch to other topics or '+
+	'<span style="color: #9c477b;">use the topic map</span> above to find common aspects.'+
+	'<br><br>'+
+	'<span style="color: #9c477b;">Follow your curiosity</span> - it will show you where to go next.'+
+	'<br><br>'+
+	'<span style="color: #9c477b; font-size: x-large;">Have fun exploring!</span>'+
 	'</div>';
 	document.getElementById("cardList").innerHTML = getStarted;
 }
@@ -153,25 +226,6 @@ function showAbout(){
 	'<a href="mailto:alicia.hofstaetter@geogebra.org">Alicia Hofstätter</a>'+
 	'</div>';
 	document.getElementById("cardList").innerHTML = about;
-}
-
-function createImages(){
-	if(document.getElementById("cardList")){
-		document.getElementById("cardList").innerHTML = ' ';
-	} 
-	var dir = "/exhibition/";
-	var fileextension = ".jpeg";
-	$.ajax({
-		//This will retrieve the contents of the folder if the folder is configured as 'browsable'
-		url: dir,
-		success: function (data) {
-			//List all .png file names in the page
-			$(data).find("a:contains(" + fileextension + ")").each(function () {
-				var filename = this.href.replace(window.location.host, "").replace("http://", "");
-				$("body").append("<img src='" + dir + filename + "'>");
-			});
-		}
-	});
 }
 
 
